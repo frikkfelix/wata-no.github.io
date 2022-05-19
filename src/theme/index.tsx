@@ -6,6 +6,7 @@ import {
 } from '@mui/material'
 import { CssBaseline } from '@mui/material'
 import palette from './palette'
+import Overrides from './overrides'
 
 type ThemeProviderProps = {
   children: React.ReactNode
@@ -17,6 +18,8 @@ export default function ThemeProvider({ children } : ThemeProviderProps) {
   }
 
   const theme = createTheme(themeOptions)
+
+  theme.components = Overrides()
 
   return (
     <StyledEngineProvider injectFirst>

@@ -1,11 +1,15 @@
 const navConfig = [
   {
-    title: 'Hjem',
+    key: 'home',
     path: '/'
   },
   {
-    title: 'Om oss',
+    key: 'about',
     path: '/about'
+  },
+  {
+    key: 'contact',
+    path: '/contact'
   }
 ]
 

@@ -1,14 +1,17 @@
 import React from 'react'
-import { Stack, Link, styled } from '@mui/material'
+import { Stack, Link } from '@mui/material'
 import { NavLink, NavLinkProps } from 'react-router-dom'
 import navConfig from './navConfig'
+import { useTranslation } from 'react-i18next'
 
 export default function DesktopMenu() {
+  const { t: translate } = useTranslation()
+
   return (
     <Stack direction="row">
       {navConfig.map(item => (
         <DesktopMenuItem
-          title={item.title}
+          title={translate(item.key)}
           path={item.path}
         />
       ))}
@@ -36,9 +39,11 @@ function DesktopMenuItem({ title, path }: DesktopMenuItemProps) {
         marginRight: 2,
         color: 'text.primary',
         '&:hover': {
+          color: 'action.hover',
           opacity: 0.48,
           textDecoration: 'none',
         },
+        textTransform: 'capitalize'
       }}
       href={path}
       component={LinkBehavior}
