@@ -34,12 +34,14 @@ export default function MenuMobile() {
         anchor="top"
         open={open}
         onClose={handleCloseDrawer}
-        ModalProps={{ keepMounted: true }}
+        ModalProps={{
+          keepMounted: true
+        }}
       >
         <List>
           {navConfig.map(item => (
             <MenuMobileItem
-              title={translate(item.key)}
+              title={translate(`${item.key}.title`)}
               path={item.path} />
           ))}
         </List>

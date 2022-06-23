@@ -4,37 +4,35 @@ import {
   useMediaQuery,
   styled,
   AppBar,
-  Toolbar, Theme, Container, Box, Divider,
+  Toolbar, Theme, Container, Box, Divider, Button,
 } from '@mui/material'
-import DesktopMenu from './DesktopMenu'
+import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 import { alpha } from '@mui/material/styles'
 import FullLogo from '../components/FullLogo'
-import LanguageButton from '../components/LanguageButton'
+import LanguageSelect from '../components/LanguageSelect'
 
 const StyledToolBar = styled(Toolbar)(({ theme }) => ({
-  height: 64,
+  height: '120px',
   [theme.breakpoints.up('md')]: {
-    height: 88
+    height: '120px'
   },
 }))
 
 
 export default function Header() {
-  const theme = useTheme()
   const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'))
 
   return (
     <AppBar
       sx={{
         boxShadow: 0,
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
       }}
     >
       <StyledToolBar
         sx={{
-          backgroundColor: alpha(theme.palette.background.default, 0.9),
-          backdropFilter: 'blur(6px)'
+          backgroundColor: '#FFFFFF',
         }}
       >
        <Container
@@ -48,9 +46,11 @@ export default function Header() {
 
          <Box sx={{ flexGrow: 1 }} />
 
-         { isDesktop ? <DesktopMenu /> : <MenuMobile /> }
+         { isDesktop && <MenuDesktop /> }
 
-         <LanguageButton />
+         <LanguageSelect />
+
+         { !isDesktop && <MenuMobile />}
 
        </Container>
       </StyledToolBar>

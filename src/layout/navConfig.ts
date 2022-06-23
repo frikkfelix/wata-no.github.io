@@ -1,7 +1,7 @@
 const navConfig = [
   {
-    key: 'home',
-    path: '/'
+    key: 'solutions',
+    path: '/solutions'
   },
   {
     key: 'about',
@@ -10,7 +10,7 @@ const navConfig = [
   {
     key: 'contact',
     path: '/contact'
-  }
+  },
 ]
 
 export default navConfig
