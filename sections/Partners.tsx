@@ -4,23 +4,23 @@ import { partners } from '../config'
 
 export default function Partners() {
   return (
-    <Container sx={{ py: 12 }}>
+    <Container sx={{ py: 12 }} >
       <Stack alignItems='center' spacing={2}>
-        <Typography variant='h4'>
+        <Typography variant='h5'>
           Våre partnere
         </Typography>
         <Grid
           container
           alignItems='center'
-          spacing={2}
+          spacing={6}
           sx={{
-            justifyContent: { xs: 'center', md: 'space-between' }
+            justifyContent: { sm: 'center', md: 'space-between' }
           }}
         >
           {partners.map(partner => (
-            <Grid item>
+            <Grid item key={partner.key}>
               <Box
-                height={46}
+                height={36}
                 component='img'
                 src={partner.image}
               />

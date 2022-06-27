@@ -32,7 +32,6 @@ export default function ThemeProvider({ children } : ThemeProviderProps) {
           styles={{
             main: {
               backgroundColor: "#f8f8f8",
-              minHeight: "calc(100vh - 370px)",
               marginTop: '120px'
             }
           }}

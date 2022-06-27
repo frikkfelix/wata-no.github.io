@@ -67,18 +67,23 @@ export const employees = [
 
 export const partners = [
   {
+    key: 'knowit',
     image: 'img/partners/knowit.png'
   },
   {
+    key: 'pipelife',
     image: 'img/partners/pipelife.png'
   },
   {
+    key: 'innovasjon_norge',
     image: 'img/partners/innovasjon_norge.png'
   },
   {
+    key: 'ntnu',
     image: 'img/partners/ntnu.png'
   },
   {
+    key: 'telenor',
     image: 'img/partners/telenor.png'
   }
 ]
@@ -105,7 +110,7 @@ export const solutions = [
   },
   {
     title: 'Farevarsel',
-    description: 'Vi har erfart at sanntidsovervåkning bare gir nytte så lenge noen kontinuerlig overvåker situasjonen. For at man faktisk skal kunne agere på fremtidige hendelser tilbyr vi løsninger for automatisk varsling. Våre modeller kombinerer hydrometeorologisk data med maskinlæring for å skape prognoser om fremtidig vannstand og vannføring. Takket være avansert maskinlæring, er vi er stolte av å kunne si at den kombinerte løsningen håndterer flom- og farevarsel raskere og mer lokalt enn dagens hydrologiske modeller. Alt dette uten at noen trenger å kontinuerlig overvåke situasjonen.',
+    description: 'Med automatisk varsling fjernes behovet for kontinuerlig manuell overvåkning. Våre modeller kombinerer hydrometeorologisk data med maskinlæring for å generere prognoser om fremtidig vannstand og vannføring, raskere og mer lokalt enn dagens hydrologiske modeller.',
     illustration: getIllustrationPath('warning'),
   },
   {
