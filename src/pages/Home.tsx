@@ -4,6 +4,8 @@ import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import { AiOutlineArrowRight } from 'react-icons/all'
 import { Link } from 'react-router-dom'
 import Partners from '../components/Partners'
+import { solutions } from '../config'
+import Solutions from '../components/Solutions'
 
 
 export default function Home() {
@@ -47,8 +49,9 @@ export default function Home() {
               variant="subtitle1"
               sx={{ color: 'common.white' }}
             >
-              Wata kombinerer sensorteknologi og maskinlæring for å
-              forutse og varsle <br/> om flomhendelser, <strong>raskere og mer nøyaktig</strong> enn dagens modeller
+              Klimaendringer har skapt et behov for en løsning som kan forutse og varsle om
+              flomhendelser tidligere, og med større sikkerhet. Tidlig varsling gjør det mulig å
+              iverksette risikoreduserende tiltak for å sikre liv og helse, kritiske tjenester og verdier.
             </Typography>
             <Button
               variant='contained'
@@ -63,75 +66,8 @@ export default function Home() {
           </Stack>
         </Container>
       </Box>
-      <Box>
-        <Partners />
-        <Box sx={{ backgroundColor: '#FFFFFF', py: 12}}>
-          <Container>
-            <Grid container spacing={3}>
-              <Grid item xs={12} md={7}>
-                <Stack spacing={4}>
-                  <Stack direction='row' spacing={2} alignItems='center'>
-                    <Box
-                      component='img'
-                      src='chevron.svg'
-                      height='1.5em'
-                    />
-                    <Typography variant='h5' sx={{ fontSize: '1em' }}>
-                      Flom- og farevarsel
-                    </Typography>
-                  </Stack>
-                  <Typography variant="h3">
-                    Nøyaktig flomvarsling <br />- 24 timer i forkant
-                  </Typography>
-                  <Typography variant="body1">
-                    Klimaendringer har skapt et behov for en løsning som kan forutse og varsle om flomhendelser tidligere, og med større sikkerhet.
-                    Tidlig varsling gjør det mulig å iverksette risikioreduserende tiltak for å sikre liv og helse, kritiske tjenester og verdier.
-                  </Typography>
-                  <Stack direction='row' spacing={2}>
-                    <Button
-                      size="large"
-                      variant="contained"
-                      sx={{ borderRadius: '24px' }}
-                      to="/solutions"
-                      component={Link}
-                    >
-                      Våre løsninger
-                    </Button>
-                    <Button
-                      size="large"
-                      variant="outlined"
-                      sx={{
-                        borderRadius: '24px',
-                        ':hover': {
-                          backgroundColor: 'transparent'
-                        }
-                      }}
-                      to="/contact"
-                      component={Link}
-                    >
-                      Kontakt oss
-                    </Button>
-                  </Stack>
-                </Stack>
-              </Grid>
-              <Grid item xs={12} md={5}>
-                <Box
-                  justifyContent='flex-end'
-                  sx={{
-                    display: { xs: 'none', md: 'flex' },
-                  }}
-                >
-                  <Box
-                    component="img"
-                    src="illustrations/analytics.svg"
-                  />
-                </Box>
-              </Grid>
-            </Grid>
-
-          </Container>
-        </Box>
-      </Box>
+      <Partners />
+      <Solutions />
     </Page>
   )
 }

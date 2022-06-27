@@ -24,7 +24,13 @@ const typography: TypographyOptions = {
     lineHeight: 1.5,
   },
   body1: {
+    fontWeight: 300,
     lineHeight: 1.5,
+    fontSize: '1.1rem'
+  },
+  subtitle1: {
+    lineHeight: 1.5,
+    fontSize: '1.1rem'
   },
   overline: {
     fontWeight: 700,

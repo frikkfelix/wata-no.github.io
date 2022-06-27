@@ -20,7 +20,7 @@ export default function Partners() {
           {partners.map(partner => (
             <Grid item>
               <Box
-                height={36}
+                height={46}
                 component='img'
                 src={partner.image}
               />

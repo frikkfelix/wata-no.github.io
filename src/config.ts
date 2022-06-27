@@ -52,6 +52,21 @@ export const employees = [
     name: 'Christopher Gjøvåg',
     title: 'Utvikler',
   },
+  {
+    image: getEmployeeImagePath('elisabeth'),
+    name: 'Elisabeth Doan',
+    title: 'Utvikler'
+  },
+  {
+    image: getEmployeeImagePath('ingrid'),
+    name: 'Ingrid Aaseng',
+    title: 'Utvikler'
+  },
+  {
+    image: getEmployeeImagePath('frikk'),
+    name: 'Frikk Fjuk',
+    title: 'Utvikler'
+  }
 ]
 
 export const partners = [

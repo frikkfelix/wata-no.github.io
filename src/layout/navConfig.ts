@@ -1,7 +1,7 @@
 const navConfig = [
   {
     key: 'solutions',
-    path: '/solutions'
+    path: '/#solutions'
   },
   {
     key: 'about',

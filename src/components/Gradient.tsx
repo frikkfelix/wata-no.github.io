@@ -4,14 +4,15 @@ import { Box, Container, Stack, Typography } from '@mui/material'
 type GradientProps = {
   title?: string,
   subtitle?: string,
+  height?: string
 }
 
-export default function Gradient({ title, subtitle }: GradientProps) {
+export default function Gradient({ title, subtitle, height='35vh' }: GradientProps) {
   return (
     <Box
       sx={{
         width: '100%',
-        height: '35vh',
+        height: height,
         display: 'flex',
         position: 'relative',
         alignItems: 'center',
