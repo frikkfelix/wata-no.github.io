@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Divider, Typography, Grid, Stack, Link as MUILink } from '@mui/material'
+import { Box, Container, Divider, Typography, Grid, Link as MUILink } from '@mui/material'
 import Link from 'next/link'
 import NAV_CONFIG from './navConfig'
 
@@ -14,9 +14,7 @@ function Footer() {
       }}
     >
       <Divider />
-      <Container
-        sx={{ pt: 5 }}
-      >
+      <Container sx={{ pt: 5 }}>
         <Grid
           container
           justifyContent={{ xs: 'center', md: 'space-between' }}

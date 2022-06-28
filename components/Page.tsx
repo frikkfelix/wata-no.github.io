@@ -7,7 +7,7 @@ type PageProps = {
   meta?: React.ReactNode
 }
 
-const Page = ({children, title='', meta}: PageProps) => (
+const Page = ({children, title='Wata', meta}: PageProps) => (
   <>
     <Head>
       <title>{title}</title>
