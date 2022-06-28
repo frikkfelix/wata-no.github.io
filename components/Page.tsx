@@ -11,6 +11,7 @@ const Page = ({children, title='', meta}: PageProps) => (
   <>
     <Head>
       <title>{title}</title>
+      <link rel="shortcut icon" href="/logo/logo_icon.svg" />
       {meta}
     </Head>
     {children}
