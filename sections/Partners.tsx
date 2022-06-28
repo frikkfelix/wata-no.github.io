@@ -19,7 +19,7 @@ export default function Partners() {
         alignItems='center'
         spacing={6}
         sx={{
-          justifyContent: { sm: 'center', md: 'space-between' }
+          justifyContent: { xs: 'center', md: 'space-between' }
         }}
       >
         {partners.map(partner => (
