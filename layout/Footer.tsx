@@ -25,7 +25,7 @@ function Footer() {
           <Grid item xs={12} sx={{ mb: 2 }}>
             <Box
               component='img'
-              src='/logo/logo_icon.svg'
+              src='logo/logo_icon.svg'
               sx={{ height: 24 }}
             />
           </Grid>

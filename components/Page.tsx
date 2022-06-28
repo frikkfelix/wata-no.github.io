@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import React, { forwardRef } from 'react'
-import { Box } from '@mui/material'
+import React from 'react'
 
 type PageProps = {
   title: string,
@@ -8,17 +7,15 @@ type PageProps = {
   meta?: React.ReactNode
 }
 
-const Page = forwardRef(({children, title='', meta}: PageProps, ref) => (
+const Page = ({children, title='', meta}: PageProps) => (
   <>
     <Head>
       <title>{title}</title>
       {meta}
     </Head>
-    <Box ref={ref}>
-      {children}
-    </Box>
+    {children}
   </>
-))
+)
 
 export default Page
 

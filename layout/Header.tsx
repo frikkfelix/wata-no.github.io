@@ -1,25 +1,14 @@
 import React from 'react'
 import {
-  useMediaQuery,
-  styled,
   AppBar,
-  Toolbar, Theme, Container, Box, Divider,
+  Toolbar,
+  Container, Box, Divider,
 } from '@mui/material'
 import MenuDesktop from './MenuDesktop'
 import MenuMobile from './MenuMobile'
 import FullLogo from '../components/FullLogo'
 
-const StyledToolBar = styled(Toolbar)(({ theme }) => ({
-  height: '120px',
-  [theme.breakpoints.up('md')]: {
-    height: '120px'
-  },
-}))
-
-
-export default function Header() {
-  const isDesktop = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'))
-
+function Header() {
   return (
     <AppBar
       sx={{
@@ -27,8 +16,9 @@ export default function Header() {
         backgroundColor: 'transparent',
       }}
     >
-      <StyledToolBar
+      <Toolbar
         sx={{
+          height: '120px',
           backgroundColor: '#FFFFFF',
         }}
       >
@@ -43,15 +33,23 @@ export default function Header() {
 
          <Box sx={{ flexGrow: 1 }} />
 
-         { isDesktop && <MenuDesktop /> }
+         <Box sx={{
+           display: { xs: 'none', sm: 'block' }
+         }}>
+           <MenuDesktop />
+         </Box>
 
-         {/*<LanguageSelect />*/}
-
-         { !isDesktop && <MenuMobile />}
+         <Box sx={{
+           display: { xs: 'block', sm: 'none' }
+         }}>
+           <MenuMobile />
+         </Box>
 
        </Container>
-      </StyledToolBar>
+      </Toolbar>
       <Divider />
     </AppBar>
   )
 }
+
+export default Header

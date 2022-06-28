@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Box, Link as MUILink } from '@mui/material'
 
 export default function FullLogo() {
-  const logo = '/logo/logo.svg'
+  const logo = 'logo/logo.svg'
 
   return (
     <Link href='/' passHref>

@@ -19,7 +19,7 @@ const About: NextPage = () => {
           spacing={6}
         >
           {employees.map(employee => (
-            <Grid item xs={6} md={4}>
+            <Grid item xs={6} md={4} key={employee.name}>
               <Employee {...employee} />
             </Grid>
           ))}
