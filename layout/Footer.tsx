@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container, Divider, Typography, Grid, Stack, Link as MUILink } from '@mui/material'
 import Link from 'next/link'
-import navConfig from './navConfig'
+import NAV_CONFIG from './navConfig'
 
 function Footer() {
   return (
@@ -37,16 +37,14 @@ function Footer() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={7}>
-            <Stack
-              spacing={5}
-              direction={{ xs: 'column', md: 'row' }}
-              justifyContent="space-between"
-            >
-              <Stack key='owners' spacing={1} sx={{ mt: { xs: 5, md: 0 } }}>
+            <Grid container key='owners' spacing={1} sx={{ mt: { xs: 5, md: 0 } }}>
+              <Grid item xs={12}>
                 <Typography component="p" variant="overline">
                   wata
                 </Typography>
-                {navConfig.map(item => (
+              </Grid>
+              {NAV_CONFIG.map(item => (
+                <Grid item xs={12} key={item.title}>
                   <Link key={item.title} href={item.path} passHref>
                     <MUILink
                       sx={{
@@ -63,9 +61,9 @@ function Footer() {
                       </Typography>
                     </MUILink>
                   </Link>
-                ))}
-              </Stack>
-            </Stack>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <Typography

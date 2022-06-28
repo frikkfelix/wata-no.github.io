@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Drawer, IconButton, List, ListItemButton, ListItemText } from '@mui/material'
 import Link from 'next/link'
-import navConfig from './navConfig'
+import NAV_CONFIG from './navConfig'
 
 type MenuMobileItemProps = {
   title: string,
@@ -54,7 +54,7 @@ function MenuMobile() {
         }}
       >
         <List>
-          {navConfig.map(item => (
+          {NAV_CONFIG.map(item => (
             <MenuMobileItem
               key={item.title}
               title={item.title}

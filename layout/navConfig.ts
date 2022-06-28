@@ -1,4 +1,4 @@
-const navConfig = [
+const NAV_CONFIG = [
   {
     title: 'løsninger',
     path: '/#solutions'
@@ -13,4 +13,4 @@ const navConfig = [
   },
 ]
 
-export default navConfig
+export default NAV_CONFIG

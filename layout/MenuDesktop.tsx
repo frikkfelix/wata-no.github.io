@@ -1,12 +1,12 @@
 import React from 'react'
 import { Stack, Link as MUILink } from '@mui/material'
 import Link from 'next/link'
-import navConfig from './navConfig'
+import NAV_CONFIG from './navConfig'
 
 export default function MenuDesktop() {
   return (
     <Stack direction="row">
-      {navConfig.map(item => (
+      {NAV_CONFIG.map(item => (
         <DesktopMenuItem
           key={item.title}
           title={item.title}

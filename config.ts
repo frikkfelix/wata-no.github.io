@@ -14,7 +14,7 @@ export const languages = [
 ]
 
 const getEmployeeImagePath = (name: string) => {
-  return `img/employees/${name}.png`
+  return `img/employees/JPEG/${name}.jpg`
 }
 
 export const employees = [

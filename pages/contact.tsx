@@ -7,7 +7,7 @@ import { NextPage } from 'next'
 
 const Contact: NextPage = () => {
   const contactPerson = {
-    image: 'img/employees/gurrich.png',
+    image: 'img/employees/JPEG/gurrich.jpg',
     name: 'Jonas Gürrich',
     title: 'product manager',
     email: 'jonas.gurrich@knowit.no',

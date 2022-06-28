@@ -8,12 +8,12 @@ import { NextPage } from 'next'
 
 const About: NextPage = () => {
   return (
-    <Page title='About'>
+    <Page title='Om oss'>
       <Gradient
         title='Om oss'
         subtitle='Wata ble til som et samarbeidsprosjekt mellom Pipelife og Knowit i 2021. Pipelife er Norges største produsent av plastrør og har spesialisert seg på IoT-teknologi, mens Knowit er et IT-konsulentselskap med spisskompetanse på AI og maskinlæring, digitalisering og utvikling av digitale produkter.'
       />
-      <Container sx={{ py: 10 }} maxWidth='md'>
+      <Container sx={{ py: 10 }}>
         <Grid
           container
           spacing={6}

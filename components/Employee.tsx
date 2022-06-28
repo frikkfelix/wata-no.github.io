@@ -1,5 +1,5 @@
 import React from 'react'
-import { Avatar, Link, Stack, Typography } from '@mui/material'
+import { Avatar, Grid, Link, Stack, Typography } from '@mui/material'
 
 type Employee = {
   image: string,
@@ -19,16 +19,18 @@ export default function Employee(employee: Employee) {
   } = employee;
 
   return (
-    <Stack alignItems='center' spacing={2}>
-      <Avatar
-        src={image}
-        sx={{
-          width: 164,
-          height: 164,
-          border: '0.1px solid lightgray'
-        }}
-      />
-      <Stack alignItems='center' spacing={1}>
+    <Grid container alignItems='center' justifyContent='center' spacing={1}>
+      <Grid item>
+        <Avatar
+          src={image}
+          sx={{
+            width: 164,
+            height: 164,
+            border: '0.1px solid lightgray'
+          }}
+        />
+      </Grid>
+      <Grid xs={12} item sx={{ textAlign: 'center' }}>
         <Typography variant='h6'>
           {name}
         </Typography>
@@ -45,7 +47,7 @@ export default function Employee(employee: Employee) {
             {phone}
           </Typography>
         </Link>}
-      </Stack>
-    </Stack>
+      </Grid>
+    </Grid>
   )
 }
